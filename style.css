@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* 全局 body 样式 */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -6,92 +6,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #87CEFA, #E0FFFF); /* 天蓝 + 淡青 */
+  background: linear-gradient(135deg, #a0cfed, #c2f0f0); /* 天蓝 + 淡青渐变 */
   color: #333;
   position: relative;
-}
-
-/* 页面内容 */
-.page {
-  flex: 1;
-  display: none;
-  padding: 60px 20px 20px 20px; /* 留出顶部按钮空间 */
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.page.active {
-  display: block;
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-/* Log in / Sign Up 按钮（左上角） */
-.top-buttons {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-.top-buttons button {
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 600;
-  border: 2px solid #1E90FF;
-  border-radius: 6px;
-  background: none; /* 不要背景 */
-  cursor: pointer;
-  color: #1E90FF;
-  transition: all 0.2s;
-}
-
-.top-buttons button:hover {
-  color: #fff;
-  background-color: #1E90FF;
-}
-
-/* 底部按钮 */
-.footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  border-top: 2px solid #1E90FF;
-  background-color: rgba(255,255,255,0.3);
-}
-
-.footer button {
-  padding: 10px 15px;
-  font-size: 16px;
-  border: 2px solid #1E90FF;
-  border-radius: 8px;
-  background: none;
-  color: #1E90FF;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.footer button:hover {
-  background-color: #1E90FF;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* 页面标题 */
-.page h1 {
-  font-size: 2.2em;
-  margin-bottom: 20px;
-  color: #1E90FF;
-}
-
-/* 页面段落 */
-.page p {
-  font-size: 1.1em;
-  color: #333;
-}
-
-/* 页面切换动画 */
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.98);}
-  to {opacity: 1; transform: scale(1);}
 }
