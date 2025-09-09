@@ -1,12 +1,12 @@
 /* 全局样式 */
 body {
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #ffd1dc, #ffe7a1);
+  background-color: #f7f7f7;
   color: #333;
 }
 
@@ -14,58 +14,60 @@ body {
 .page {
   flex: 1;
   display: none;
-  padding: 30px;
+  padding: 40px 20px;
   text-align: center;
-  transition: all 0.3s ease;
 }
 
 .page.active {
   display: block;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* 底部按钮 */
-.footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  background-color: #ffebf0;
-  border-top: 2px solid #ffb6c1;
-}
-
-.footer button {
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s;
-  background-color: #ff99cc;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.footer button:hover {
-  background-color: #ff66aa;
-  transform: translateY(-2px);
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 /* 页面标题 */
 .page h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 20px;
-  color: #ff4d94;
+  color: #222;
 }
 
 /* 页面段落 */
 .page p {
-  font-size: 1.2em;
-  color: #333;
+  font-size: 1.1em;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* 弹出动画 */
+/* 底部导航按钮 */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.footer button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #1e90ff; /* 按钮主色 */
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.footer button:hover {
+  background-color: #007acc;
+  transform: translateY(-2px);
+}
+
+/* 动画效果 */
 @keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.95);}
-  to {opacity: 1; transform: scale(1);}
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
 }
