@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U9 网站</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 页面容器 -->
+  <div id="pages">
+    <div id="home" class="page">主页内容</div>
+    <div id="info" class="page">信息/聊天内容</div>
+    <div id="orders" class="page">订单/任务内容</div>
+    <div id="about" class="page">关于内容</div>
+    <div id="profile" class="page">我的内容</div>
+  </div>
 
+  <!-- 底部导航 -->
+  <div id="navbar">
+    <button onclick="showPage('home')">主页</button>
+    <button onclick="showPage('info')">信息</button>
+    <button onclick="showPage('orders')">订单</button>
+    <button onclick="showPage('about')">关于</button>
+    <button onclick="showPage('profile')">我的</button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/info.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
