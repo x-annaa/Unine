@@ -3,10 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>U9</title>
+  <title>U9 - Single Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      flex: 1;
+      display: none; /* 默认隐藏 */
+      padding: 20px;
+    }
+
+    .page.active {
+      display: block; /* 当前页面显示 */
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background-color: #eee;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <button>Log in</button>
-  <button>Sign Up</button>
+
+  <!-- 页面内容 -->
+  <div id="pageA" class="page active">
+    <h1>Page A</h1>
+    <p>这里是页面 A 的内容</p>
+  </div>
+
+  <div id="pageB" class="page">
+    <h1>Page B</h1>
+    <p>这里是页面 B 的内容</p>
+  </div>
+
+  <div id="pageC" class="page">
+    <h1>Page C</h1>
+    <p>这里是页面 C 的内容</p>
+  </div>
+
+  <div id="pageD" class="page">
+    <h1>Page D</h1>
+    <p>这里是页面 D 的内容</p>
+  </div>
+
+  <div id="pageE" class="page">
+    <h1>Page E</h1>
+    <p>这里是页面 E 的内容</p>
+  </div>
+
+  <!-- 底部按钮 -->
+  <div class="footer">
+    <button onclick="showPage('A')">A</button>
+    <button onclick="showPage('B')">B</button>
+    <button onclick="showPage('C')">C</button>
+    <button onclick="showPage('D')">D</button>
+    <button onclick="showPage('E')">E</button>
+  </div>
+
+  <script>
+    function showPage(page) {
+      // 隐藏所有页面
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+
+      // 显示对应页面
+      document.getElementById('page' + page).classList.add('active');
+    }
+  </script>
+
 </body>
 </html>
