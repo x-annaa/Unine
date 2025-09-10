@@ -12,3 +12,14 @@ export async function registerUser(username, password) {
     .insert([{ username, password }]);
   return { data, error };
 }
+
+//（ 2 ）// 底部菜单
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.style.display = 'none';
+  });
+  document.getElementById(pageId).style.display = 'block';
+}
+
+// 默认显示主页
+showPage('home');
